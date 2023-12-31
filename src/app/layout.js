@@ -1,8 +1,4 @@
-import { DM_Sans } from 'next/font/google'
 import './globals.css'
-import LoginPage from './(auth)/login/LoginPage'
-
-const inter = DM_Sans({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Same View',
@@ -12,7 +8,6 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <>
-       <LoginPage/>
       <main>{children}</main>
     </>
   )
