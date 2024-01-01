@@ -1,6 +1,9 @@
 'use client'
 import './globals.css'
 import React from 'react';
+import { DM_Sans } from 'next/font/google'
+
+const font = DM_Sans({ subsets: ['latin'] })
 import { SessionProvider } from 'next-auth/react';
 
 // export const metadata = {
@@ -12,7 +15,7 @@ const Layout = ({children}) => {
   return (
     <SessionProvider>
       <html lang="en">
-        <body>{children}</body>
+        <body className={font.className}>{children}</body>
       </html>
     </SessionProvider>
   )

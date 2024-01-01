@@ -495,10 +495,146 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.bottom-3 {
+  bottom: 0.75rem;
+}
+.right-6 {
+  right: 1.5rem;
+}
 .m-auto {
   margin: auto;
 }
-
+.mt-\[-8px\] {
+  margin-top: -8px;
+}
+.mt-\[20px\] {
+  margin-top: 20px;
+}
+.flex {
+  display: flex;
+}
+.h-\[0\.1rem\] {
+  height: 0.1rem;
+}
+.h-\[35px\] {
+  height: 35px;
+}
+.h-\[45px\] {
+  height: 45px;
+}
+.h-\[570px\] {
+  height: 570px;
+}
+.h-screen {
+  height: 100vh;
+}
+.w-\[12rem\] {
+  width: 12rem;
+}
+.w-\[180px\] {
+  width: 180px;
+}
+.w-\[340px\] {
+  width: 340px;
+}
+.w-\[470px\] {
+  width: 470px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-\[10px\] {
+  gap: 10px;
+}
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+.rounded-\[10px\] {
+  border-radius: 10px;
+}
+.rounded-\[15px\] {
+  border-radius: 15px;
+}
+.border {
+  border-width: 1px;
+}
+.border-2 {
+  border-width: 2px;
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.pl-\[10px\] {
+  padding-left: 10px;
+}
+.pl-\[20px\] {
+  padding-left: 20px;
+}
+.pr-\[20px\] {
+  padding-right: 20px;
+}
+.pt-\[3px\] {
+  padding-top: 3px;
+}
+.pt-\[40px\] {
+  padding-top: 40px;
+}
+.pt-\[60px\] {
+  padding-top: 60px;
+}
+.text-center {
+  text-align: center;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-medium {
+  font-weight: 500;
+}
+.text-\[\#006ACB\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 106 203 / var(--tw-text-opacity));
+}
+.text-\[\#616161\] {
+  --tw-text-opacity: 1;
+  color: rgb(97 97 97 / var(--tw-text-opacity));
+}
+.duration-\[300ms\] {
+  transition-duration: 300ms;
+}
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
 
 :root {
   box-sizing: border-box;
@@ -507,5 +643,53 @@ video {
   margin: 0 auto;
 }
 
+.font-bold {
+  font-family: '__DM_Sans_6ff133', sans-serif;
+  font-weight: 700;
+}
+.font-medium {
+  font-family: '__DM_Sans_6ff133', sans-serif;
+  font-weight: 500;
+}
+.font-regular {
+  font-family: '__DM_Sans_6ff133', sans-serif;
+  font-weight: 400;
+}
 
+.custom-blue {
+  background-color: #BADEFF;
+}
+
+.design-bg {
+  background-image: url(/_next/static/media/designart.de5cf35e.svg);
+  background-position: center;
+}
+
+.hover\:bg-sky-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(125 211 252 / var(--tw-bg-opacity));
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[11].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.jsx","import":"DM_Sans","arguments":[{"subsets":["latin"]}],"variableName":"font"} ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* latin-ext */
+@font-face {
+  font-family: '__DM_Sans_6ff133';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url(/_next/static/media/adde053269573569-s.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: '__DM_Sans_6ff133';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url(/_next/static/media/3e3cf2ee9aa3f174-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {font-family: '__DM_Sans_Fallback_6ff133';src: local("Arial");ascent-override: 94.37%;descent-override: 29.49%;line-gap-override: 0.00%;size-adjust: 105.12%
+}.__className_6ff133 {font-family: '__DM_Sans_6ff133', '__DM_Sans_Fallback_6ff133';font-style: normal
+}
 

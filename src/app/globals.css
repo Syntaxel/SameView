@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   box-sizing: border-box;
   /* max-width: 1363px; */
@@ -10,4 +9,24 @@
   margin: 0 auto;
 }
 
+.font-bold {
+  font-family: '__DM_Sans_6ff133', sans-serif;
+  font-weight: 700;
+}
+.font-medium {
+  font-family: '__DM_Sans_6ff133', sans-serif;
+  font-weight: 500;
+}
+.font-regular {
+  font-family: '__DM_Sans_6ff133', sans-serif;
+  font-weight: 400;
+}
 
+.custom-blue {
+  background-color: #BADEFF;
+}
+
+.design-bg {
+  background-image: url('./assets/designart.svg');
+  background-position: center;
+}
