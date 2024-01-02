@@ -2,7 +2,9 @@
 import React, { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import { getSession } from 'next-auth/react';
 import Header from './components/Header';
+
 
 const Home = () => {
   const { data: session } = useSession();
@@ -24,6 +26,8 @@ const Home = () => {
   }
 
   return <div>Loading...</div>;
+  
 };
+
 
 export default Home;

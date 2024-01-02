@@ -504,32 +504,14 @@ video {
 .bottom-3 {
   bottom: 0.75rem;
 }
+.left-8 {
+  left: 2rem;
+}
 .right-6 {
   right: 1.5rem;
 }
-.top-0 {
-  top: 0px;
-}
-.left-0 {
-  left: 0px;
-}
-.left-5 {
-  left: 1.25rem;
-}
-.top-10 {
-  top: 2.5rem;
-}
-.left-10 {
-  left: 2.5rem;
-}
-.top-5 {
-  top: 1.25rem;
-}
 .top-8 {
   top: 2rem;
-}
-.left-8 {
-  left: 2rem;
 }
 .m-auto {
   margin: auto;
