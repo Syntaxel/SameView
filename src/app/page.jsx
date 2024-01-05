@@ -1,33 +1,20 @@
-'use client'
-import React, { useEffect } from 'react';
-import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
-import { getSession } from 'next-auth/react';
-import Header from './components/Header';
+'use client';
+import { signOut, useSession } from 'next-auth/react';
+import { redirect } from 'next/navigation';
 
+export default function Home() {
+  const session = useSession({
+    required: true,
+    onUnauthenticated() {
+      redirect('/auth/login');
+    },
+  });
+  return (
+    <div className="p-8">
+      <div className='text-white'>{session?.data?.user?.email }</div>
+      <button className='text-white' onClick={() => signOut()}>Logout</button>
+    </div>
+  )
+}
 
-const Home = () => {
-  const { data: session } = useSession();
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!session) {
-      router.push("auth/login");
-    }
-  }, [session, router]);
-
-  if (session) {
-    return (
-      <div>
-        <Header />
-        <h1>Dashboard</h1>
-      </div>
-    );
-  }
-
-  return <div>Loading...</div>;
-  
-};
-
-
-export default Home;
+Home.requireAuth = true

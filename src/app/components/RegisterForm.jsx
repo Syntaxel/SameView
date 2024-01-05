@@ -3,13 +3,10 @@ import React from 'react';
 import Image from 'next/image';
 import Logo from '../assets/Logo.svg';
 import Link from 'next/link';
-import { signUp } from 'next-auth/react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { registerUser } from '../utils/auth';
-import { useSession } from 'next-auth/react';
-// import useSWR from 'swr';
-import { useMutation } from 'react-query';
+import { auth } from '../firebase'
+import {createUserWithEmailAndPassword} from 'firebase/auth'
 
 const RegisterForm = () => {
   const router = useRouter();
@@ -17,30 +14,9 @@ const RegisterForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
-//   const { mutate } = useSWR('register', registerUser);
-  const mutation = useMutation((data) => registerUser(data.email, data.password));
-  const { data: session } = useSession();
-  
-  const handleRegister = async (e) => {
-    e.preventDefault();
 
-    try {
-      if (password !== passwordRepeat) {
-        throw new Error('Passwords do not match');
-      }
-      console.log(password)
-
-      const result = mutation.mutate({email,password});
-
-        
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  if (session) {
-    router.push('/login');
-    return null;
+  const register = () => {
+    createUserWithEmailAndPassword(auth, email, password)
   }
 
   return (
@@ -54,8 +30,7 @@ const RegisterForm = () => {
                     alt="SameView Logo"
                 />
                 <div className="w-[12rem] h-[0.1rem] bg-black"></div> 
-                <h1 className="p-2 pr-5 text-lg font-medium text-[#616161]">Registration</h1>
-                <form onSubmit={handleRegister}>   
+                <h1 className="p-2 pr-5 text-lg font-medium text-[#616161]">Registration</h1> 
                 <div className='flex flex-col gap-[10px] pt-[40px]'> 
               
                     <div name="username">
@@ -74,11 +49,9 @@ const RegisterForm = () => {
                 
                 
                 <div className="flex m-auto justify-center w-[180px] h-[35px] mt-[20px] custom-blue rounded-[10px] ease-out duration-[300ms] hover:bg-sky-300 cursor-pointer" name="login-btn">
-                  <button type='submit' className="flex pt-[3px] w-[180px] h-[35px] rounded-[10px] font-bold text-lg text-center justify-center cursor-pointer">Next</button>
+                  <button onClick={() => register()}  disabled={(!email || !password)} className="flex pt-[3px] w-[180px] h-[35px] rounded-[10px] font-bold text-lg text-center justify-center cursor-pointer">Next</button>
                 </div>
-                
                 </div>
-                </form>
                 <div className="absolute flex flex-row font-medium bottom-3 right-6 "><p>Have an account? <Link href="login" className="text-[#006ACB]">Login</Link></p>  </div>
             </div>
         </div>

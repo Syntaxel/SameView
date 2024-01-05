@@ -600,6 +600,9 @@ video {
 .p-2 {
   padding: 0.5rem;
 }
+.p-8 {
+  padding: 2rem;
+}
 .pl-\[10px\] {
   padding-left: 10px;
 }
@@ -648,6 +651,10 @@ video {
 .text-\[\#7E7D7D\] {
   --tw-text-opacity: 1;
   color: rgb(126 125 125 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .outline-none {
   outline: 2px solid transparent;
