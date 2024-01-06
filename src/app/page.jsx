@@ -11,8 +11,8 @@ export default function Home() {
   });
   return (
     <div className="p-8">
-      <div className='text-white'>{session?.data?.user?.email }</div>
-      <button className='text-white' onClick={() => signOut()}>Logout</button>
+      <div>{session?.data?.user?.email }</div>
+      <button onClick={() => signOut()}>Logout</button>
     </div>
   )
 }
