@@ -46,7 +46,7 @@ const ForgotPasswordForm = () => {
                     <p className='w-[170px] pl-[10px] mt-[-8px] font-medium text-[#7E7D7D] text-[12px]'>We will send a link for change your password</p>
                 </div>
                 
-                    <div className="flex justify-center items-center w-[180px] h-[35px] mt-[20px] custom-blue rounded-[10px] ease-out duration-[300ms] hover:bg-sky-300" name="login-btn">
+                    <div className="flex justify-center items-center m-auto w-[180px] h-[35px] mt-[20px] custom-blue rounded-[10px] ease-out duration-[300ms] hover:bg-sky-300" name="login-btn">
                     <button onClick={resetPassword} disabled={!email} className="flex pt-[3px] font-bold text-lg text-center justify-center cursor-pointer">Send</button>
                     </div>
                 </form>
