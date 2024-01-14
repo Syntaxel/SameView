@@ -9,6 +9,9 @@
   margin: 0 auto;
 }
 
+body {
+  background-color: #F1F1F4;
+}
 .font-bold {
   font-family: '__DM_Sans_6ff133', sans-serif;
   font-weight: 700;
@@ -21,6 +24,7 @@
   font-family: '__DM_Sans_6ff133', sans-serif;
   font-weight: 400;
 }
+
 
 .custom-blue {
   background-color: #BADEFF;
